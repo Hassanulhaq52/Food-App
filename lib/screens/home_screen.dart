@@ -13,7 +13,7 @@ class HomeScreen extends StatelessWidget {
       body: ListView(
         children: [
           Container(
-            margin: EdgeInsets.symmetric(horizontal: 20, vertical: 80),
+            margin: const EdgeInsets.symmetric(horizontal: 20, vertical: 50),
             child: Column(
               children: [
                 Container(
@@ -32,19 +32,19 @@ class HomeScreen extends StatelessWidget {
                 const SizedBox(
                   height: 20.0,
                 ),
-                Align(
+                const Align(
                   alignment: Alignment.centerRight,
                   child: Text(
                     'View all',
-                    style: textStyle,
+                    style: Constant.textStyle,
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 10,
                 ),
                 const CategoryScreen(),
                 const SizedBox(
-                  height: 20,
+                  height: 30,
                 ),
                 const RestaurantScreen(),
               ],

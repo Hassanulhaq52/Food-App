@@ -15,7 +15,7 @@ class CategoryScreen extends StatelessWidget {
               Container(
                 height: 60,
                 width: 60,
-                decoration: boxDecoration,
+                decoration: Constant.boxDecoration,
                 child: Image.asset(
                   'assets/african.png',
                 ),
@@ -25,7 +25,7 @@ class CategoryScreen extends StatelessWidget {
               ),
               const Text(
                 'African',
-                style: textStyle,
+                style: Constant.textStyle,
               ),
             ],
           ),
@@ -37,7 +37,7 @@ class CategoryScreen extends StatelessWidget {
               Container(
                 height: 60,
                 width: 60,
-                decoration: boxDecoration,
+                decoration: Constant.boxDecoration,
                 child: Image.asset(
                   'assets/arabic.png',
                 ),
@@ -47,7 +47,7 @@ class CategoryScreen extends StatelessWidget {
               ),
               const Text(
                 'Arabic',
-                style: textStyle,
+                style: Constant.textStyle,
               ),
             ],
           ),
@@ -60,11 +60,9 @@ class CategoryScreen extends StatelessWidget {
                 padding: const EdgeInsets.only(bottom: 10),
                 height: 60,
                 width: 60,
-                decoration: boxDecoration,
+                decoration: Constant.boxDecoration,
                 child: Image.asset(
                   'assets/caribbean.png',
-                  // height: 80,
-                  // width: 80,
                 ),
               ),
               const SizedBox(
@@ -72,7 +70,7 @@ class CategoryScreen extends StatelessWidget {
               ),
               const Text(
                 'Caribbean',
-                style: textStyle,
+                style: Constant.textStyle,
               ),
             ],
           ),
@@ -84,7 +82,7 @@ class CategoryScreen extends StatelessWidget {
               Container(
                 height: 60,
                 width: 60,
-                decoration: boxDecoration,
+                decoration: Constant.boxDecoration,
                 child: Image.asset(
                   'assets/chinese.png',
                 ),
@@ -94,7 +92,7 @@ class CategoryScreen extends StatelessWidget {
               ),
               const Text(
                 'Chinese',
-                style: textStyle,
+                style: Constant.textStyle,
               ),
             ],
           ),
@@ -106,7 +104,7 @@ class CategoryScreen extends StatelessWidget {
               Container(
                 height: 60,
                 width: 60,
-                decoration: boxDecoration,
+                decoration: Constant.boxDecoration,
                 child: Image.asset(
                   'assets/indian.png',
                 ),
@@ -116,7 +114,7 @@ class CategoryScreen extends StatelessWidget {
               ),
               const Text(
                 'Indian',
-                style: textStyle,
+                style: Constant.textStyle,
               ),
             ],
           ),
@@ -128,7 +126,7 @@ class CategoryScreen extends StatelessWidget {
               Container(
                 height: 60,
                 width: 60,
-                decoration: boxDecoration,
+                decoration: Constant.boxDecoration,
                 child: Image.asset(
                   'assets/pakistani.png',
                 ),
@@ -138,7 +136,7 @@ class CategoryScreen extends StatelessWidget {
               ),
               const Text(
                 'Pakistani',
-                style: textStyle,
+                style: Constant.textStyle,
               ),
             ],
           ),
