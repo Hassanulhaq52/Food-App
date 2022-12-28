@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:food_app/constants/constants.dart';
+import 'package:food_app/screens/restaurant_screen.dart';
 
-import 'dishes_screen.dart';
+import 'category_screen.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -9,35 +10,47 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 10.0, vertical: 30.0),
-        child: Column(
-          children: [
-            Container(
-              height: 200,
-              width: 350,
-              decoration: const BoxDecoration(
-                image: DecorationImage(
-                  image: AssetImage('assets/food_image_home.jpg'),
+      body: ListView(
+        children: [
+          Container(
+            margin: EdgeInsets.symmetric(horizontal: 20, vertical: 80),
+            child: Column(
+              children: [
+                Container(
+                  height: 200,
+                  width: MediaQuery.of(context).size.width,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(5.0),
+                    image: const DecorationImage(
+                      fit: BoxFit.fill,
+                      image: AssetImage(
+                        'assets/food_image_home.jpg',
+                      ),
+                    ),
+                  ),
                 ),
-              ),
-            ),
-            const SizedBox(
-              height: 20.0,
-            ),
-            const Padding(
-              padding: EdgeInsets.only(right: 15),
-              child: Align(
-                alignment: Alignment.centerRight,
-                child: Text(
-                  'View all',
-                  style: textStyle,
+                const SizedBox(
+                  height: 20.0,
                 ),
-              ),
+                Align(
+                  alignment: Alignment.centerRight,
+                  child: Text(
+                    'View all',
+                    style: textStyle,
+                  ),
+                ),
+                SizedBox(
+                  height: 10,
+                ),
+                const CategoryScreen(),
+                const SizedBox(
+                  height: 20,
+                ),
+                const RestaurantScreen(),
+              ],
             ),
-            const CategoryScreen(),
-          ],
-        ),
+          ),
+        ],
       ),
     );
   }
