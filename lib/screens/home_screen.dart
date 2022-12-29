@@ -17,14 +17,14 @@ class HomeScreen extends StatelessWidget {
             child: Column(
               children: [
                 Container(
-                  height: 200,
+                  height: MediaQuery.of(context).size.height * 0.2,
                   width: MediaQuery.of(context).size.width,
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(5.0),
                     image: const DecorationImage(
                       fit: BoxFit.fill,
                       image: AssetImage(
-                        'assets/food_image_home.jpg',
+                        'assets/home2.jpg',
                       ),
                     ),
                   ),
@@ -36,7 +36,7 @@ class HomeScreen extends StatelessWidget {
                   alignment: Alignment.centerRight,
                   child: Text(
                     'View all',
-                    style: Constant.textStyle,
+                    style: Constant.categoryStyle,
                   ),
                 ),
                 const SizedBox(
