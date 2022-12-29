@@ -13,7 +13,7 @@ class Constant {
 
   static const TextStyle discountStyle = TextStyle(
     color: Colors.white,
-    fontSize: 13,
+    fontSize: 11,
   );
 
   static const TextStyle subtitleStyle = TextStyle(
@@ -24,7 +24,7 @@ class Constant {
 
   static const TextStyle headingStyle = TextStyle(
     fontWeight: FontWeight.bold,
-    fontSize: 20,
+    fontSize: 19,
   );
 
   static const TextStyle ratingStyle = TextStyle(
@@ -34,7 +34,9 @@ class Constant {
   );
 
   static BoxDecoration discountDecoration = BoxDecoration(
-    borderRadius: BorderRadius.circular(2.0),
+    borderRadius: const BorderRadius.only(
+      topRight: Radius.circular(3.0),
+    ),
     color: Colors.green.shade700,
   );
 

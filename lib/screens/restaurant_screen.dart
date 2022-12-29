@@ -32,7 +32,7 @@ class RestaurantScreen extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Container(
-                    height: MediaQuery.of(context).size.height * 0.22,
+                    height: MediaQuery.of(context).size.height * 0.2,
                     width: MediaQuery.of(context).size.width * 0.75,
                     decoration: Constant.restaurantDecoration.copyWith(
                       image: const DecorationImage(
@@ -46,9 +46,9 @@ class RestaurantScreen extends StatelessWidget {
                           bottom: 0.0,
                           left: 0.0,
                           child: Container(
-                            height: 23,
-                            width: 60,
-                            padding: const EdgeInsets.symmetric(vertical: 4.0),
+                            height: 22,
+                            width: 55,
+                            padding: const EdgeInsets.symmetric(vertical: 5.0),
                             decoration: Constant.discountDecoration,
                             child: const Text(
                               '15% Off',
@@ -102,7 +102,7 @@ class RestaurantScreen extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Container(
-                    height: MediaQuery.of(context).size.height * 0.22,
+                    height: MediaQuery.of(context).size.height * 0.2,
                     width: MediaQuery.of(context).size.width * 0.75,
                     decoration: Constant.restaurantDecoration.copyWith(
                       image: const DecorationImage(
@@ -153,7 +153,7 @@ class RestaurantScreen extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Container(
-                    height: MediaQuery.of(context).size.height * 0.22,
+                    height: MediaQuery.of(context).size.height * 0.2,
                     width: MediaQuery.of(context).size.width * 0.75,
                     decoration: Constant.restaurantDecoration.copyWith(
                       image: const DecorationImage(
@@ -167,9 +167,9 @@ class RestaurantScreen extends StatelessWidget {
                           bottom: 0.0,
                           left: 0.0,
                           child: Container(
-                            height: 23,
-                            width: 90,
-                            padding: const EdgeInsets.symmetric(vertical: 4.0),
+                            height: 22,
+                            width: 80,
+                            padding: const EdgeInsets.symmetric(vertical: 5.0),
                             decoration: Constant.discountDecoration,
                             child: const Text(
                               'Upto 70% Off',
