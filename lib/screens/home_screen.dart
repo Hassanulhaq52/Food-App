@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:food_app/constants/constants.dart';
-import 'package:food_app/screens/restaurant_screen.dart';
-
-import 'category_screen.dart';
+import 'package:food_app/screens/popular_foods_screen.dart';
+import 'package:food_app/screens/popular_restaurant_screen.dart';
+import 'food_category_screen.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -17,7 +17,7 @@ class HomeScreen extends StatelessWidget {
             child: Column(
               children: [
                 Container(
-                  height: MediaQuery.of(context).size.height * 0.2,
+                  height: MediaQuery.of(context).size.height * 0.21,
                   width: MediaQuery.of(context).size.width,
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(5.0),
@@ -42,11 +42,15 @@ class HomeScreen extends StatelessWidget {
                 const SizedBox(
                   height: 10,
                 ),
-                const CategoryScreen(),
+                const FoodCategoryScreen(),
                 const SizedBox(
                   height: 30,
                 ),
-                const RestaurantScreen(),
+                const PopularRestaurantScreen(),
+                const SizedBox(
+                  height: 30,
+                ),
+                const PopularFoodsScreen(),
               ],
             ),
           ),
