@@ -7,7 +7,7 @@ class Constant {
   );
 
   static const TextStyle titleStyle = TextStyle(
-    fontSize: 16,
+    fontSize: 14,
     fontWeight: FontWeight.bold,
   );
 
@@ -17,19 +17,19 @@ class Constant {
   );
 
   static const TextStyle subtitleStyle = TextStyle(
-    fontSize: 12,
+    fontSize: 11,
     fontWeight: FontWeight.bold,
     color: Colors.grey,
   );
 
   static const TextStyle headingStyle = TextStyle(
     fontWeight: FontWeight.bold,
-    fontSize: 19,
+    fontSize: 17,
   );
 
   static const TextStyle ratingStyle = TextStyle(
     color: Colors.grey,
-    fontSize: 13,
+    fontSize: 12,
     fontWeight: FontWeight.bold,
   );
 

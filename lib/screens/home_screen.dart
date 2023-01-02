@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:food_app/constants/constants.dart';
+import 'package:food_app/screens/all_restaurant_screen.dart';
+import 'package:food_app/screens/busyjollof_restaurants_screen.dart';
 import 'package:food_app/screens/popular_foods_screen.dart';
 import 'package:food_app/screens/popular_restaurant_screen.dart';
 import 'food_category_screen.dart';
@@ -44,13 +46,21 @@ class HomeScreen extends StatelessWidget {
                 ),
                 const FoodCategoryScreen(),
                 const SizedBox(
-                  height: 30,
+                  height: 26,
                 ),
                 const PopularRestaurantScreen(),
                 const SizedBox(
-                  height: 30,
+                  height: 26,
                 ),
                 const PopularFoodsScreen(),
+                const SizedBox(
+                  height: 26,
+                ),
+                const BusyJollofRestaurantScreen(),
+                const SizedBox(
+                  height: 26,
+                ),
+                const AllRestaurantScreen(),
               ],
             ),
           ),

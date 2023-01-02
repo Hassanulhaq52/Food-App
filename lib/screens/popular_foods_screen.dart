@@ -12,7 +12,7 @@ class PopularFoodsScreen extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: const [
             Text(
-              'Popular Foods Nearby',
+              'Popular Foods nearby',
               style: Constant.headingStyle,
             ),
             Text(
@@ -22,7 +22,7 @@ class PopularFoodsScreen extends StatelessWidget {
           ],
         ),
         const SizedBox(
-          height: 7,
+          height: 6,
         ),
         SingleChildScrollView(
           scrollDirection: Axis.horizontal,
@@ -32,9 +32,20 @@ class PopularFoodsScreen extends StatelessWidget {
                 foodImage: 'assets/jollof.png',
                 foodName: 'Jollof Rice',
                 restaurantName: 'Pelloma Restaurant',
-                trending: 'Trending  ',
-                trendingContainerWidth: 85,
+                trending: 'Trending ',
+                trendingContainerWidth: 76,
                 restaurantDistance: '5.8 mi',
+              ),
+              SizedBox(
+                width: 10.0,
+              ),
+              PopularFoodsWidget(
+                foodImage: 'assets/soup.png',
+                foodName: 'Egwusi Soup',
+                restaurantName: 'Suya Spot',
+                trending: '',
+                trendingContainerWidth: 0,
+                restaurantDistance: '6.3 mi',
               ),
               SizedBox(
                 width: 10.0,
@@ -90,8 +101,8 @@ class PopularFoodsWidget extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Container(
-          height: MediaQuery.of(context).size.height * 0.16,
-          width: MediaQuery.of(context).size.width * 0.72,
+          height: MediaQuery.of(context).size.height * 0.15,
+          width: MediaQuery.of(context).size.width * 0.53,
           decoration: Constant.restaurantDecoration.copyWith(
             image: DecorationImage(
               fit: BoxFit.fill,
@@ -108,7 +119,9 @@ class PopularFoodsWidget extends StatelessWidget {
                 child: Container(
                   height: 24,
                   width: trendingContainerWidth,
-                  padding: const EdgeInsets.symmetric(vertical: 4.0, horizontal: 10),
+                  padding: const EdgeInsets.symmetric(
+                    horizontal: 6,
+                  ),
                   decoration: Constant.discountDecoration,
                   child: Row(
                     children: [
@@ -117,11 +130,11 @@ class PopularFoodsWidget extends StatelessWidget {
                         textAlign: TextAlign.center,
                         style: Constant.discountStyle,
                       ),
-                      Image.asset(
-                        'assets/icon_trending.png',
-                        height: 15,
-                        width: 15,
-                      ),
+                      const Icon(
+                        Icons.trending_up_outlined,
+                        size: 18,
+                        color: Colors.white,
+                      )
                     ],
                   ),
                 ),
@@ -130,10 +143,10 @@ class PopularFoodsWidget extends StatelessWidget {
           ),
         ),
         const SizedBox(
-          height: 10.0,
+          height: 3.0,
         ),
         SizedBox(
-          width: MediaQuery.of(context).size.width * 0.72,
+          width: MediaQuery.of(context).size.width * 0.53,
           child: Row(
             children: [
               Text(
