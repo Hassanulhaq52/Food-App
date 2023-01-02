@@ -2,13 +2,15 @@ import 'package:flutter/material.dart';
 
 class Constant {
   static const TextStyle categoryStyle = TextStyle(
-    fontWeight: FontWeight.bold,
-    fontSize: 13.0,
+    fontWeight: FontWeight.w500,
+    fontFamily: 'Poppins',
+    fontSize: 12.0,
   );
 
   static const TextStyle titleStyle = TextStyle(
-    fontSize: 14,
-    fontWeight: FontWeight.bold,
+    fontSize: 13,
+    fontWeight: FontWeight.w600,
+    fontFamily: 'Poppins',
   );
 
   static const TextStyle discountStyle = TextStyle(
@@ -18,8 +20,9 @@ class Constant {
 
   static const TextStyle subtitleStyle = TextStyle(
     fontSize: 11,
-    fontWeight: FontWeight.bold,
-    color: Colors.grey,
+    fontWeight: FontWeight.w400,
+    color: Color(0xFF263238),
+    fontFamily: 'Poppins',
   );
 
   static const TextStyle headingStyle = TextStyle(
@@ -28,9 +31,10 @@ class Constant {
   );
 
   static const TextStyle ratingStyle = TextStyle(
-    color: Colors.grey,
-    fontSize: 12,
-    fontWeight: FontWeight.bold,
+    color: Color(0xff969696),
+    fontSize: 11.5,
+    fontWeight: FontWeight.w400,
+    fontFamily: 'Poppins',
   );
 
   static BoxDecoration discountDecoration = BoxDecoration(

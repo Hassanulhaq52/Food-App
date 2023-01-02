@@ -29,7 +29,7 @@ class AllRestaurantScreen extends StatelessWidget {
             PopularRestaurantsWidget(
               restaurantImage: 'assets/manchester.png',
               restaurantName: 'Manchester Farms ',
-              restaurantRating: ' 4.5',
+              restaurantRating: ' 3.7',
               restaurantSubtitle: '9.5 mi • 23 min • \$6.40 Delivery Fee',
               discountText: 'Opening Soon',
               discountContainerWidth: 80,
@@ -40,8 +40,8 @@ class AllRestaurantScreen extends StatelessWidget {
             PopularRestaurantsWidget(
               restaurantImage: 'assets/suya.png',
               restaurantName: 'The Suya Spot',
-              restaurantRating: ' 4.9 ',
-              restaurantSubtitle: '5.8 mi • 10 min • \$3.60 Delivery Fee',
+              restaurantRating: ' 2.8 ',
+              restaurantSubtitle: '4.5 mi • 8 min • \$2.90 Delivery Fee',
               discountText: '',
               discountContainerWidth: 0,
             ),
@@ -76,7 +76,7 @@ class PopularRestaurantsWidget extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Container(
-          height: MediaQuery.of(context).size.height * 0.16,
+          height: MediaQuery.of(context).size.height * 0.18,
           width: MediaQuery.of(context).size.width,
           decoration: Constant.restaurantDecoration.copyWith(
             image: DecorationImage(

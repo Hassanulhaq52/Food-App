@@ -45,18 +45,10 @@ class PopularFoodsScreen extends StatelessWidget {
                 restaurantName: 'Suya Spot',
                 trending: '',
                 trendingContainerWidth: 0,
-                restaurantDistance: '6.3 mi',
+                restaurantDistance: '4.5 mi',
               ),
               SizedBox(
                 width: 10.0,
-              ),
-              PopularFoodsWidget(
-                foodImage: 'assets/burger.jpg',
-                foodName: 'Burger',
-                restaurantName: 'Suya Spot',
-                trending: '',
-                trendingContainerWidth: 0,
-                restaurantDistance: '6.3 mi',
               ),
               SizedBox(
                 width: 10.0,
