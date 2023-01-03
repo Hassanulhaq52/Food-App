@@ -1,59 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:food_app/constants/constants.dart';
 
-class AllRestaurantScreen extends StatelessWidget {
-  const AllRestaurantScreen({Key? key}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Column(
-      children: [
-        Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: const [
-            Text(
-              'All Restaurants',
-              style: Constant.headingStyle,
-            ),
-            Text(
-              'View all',
-              style: Constant.categoryStyle,
-            ),
-          ],
-        ),
-        const SizedBox(
-          height: 6,
-        ),
-        Column(
-          children: const [
-            PopularRestaurantsWidget(
-              restaurantImage: 'assets/manchester.png',
-              restaurantName: 'Manchester Farms ',
-              restaurantRating: ' 3.7',
-              restaurantSubtitle: '9.5 mi • 23 min • \$6.40 Delivery Fee',
-              discountText: 'Opening Soon',
-              discountContainerWidth: 80,
-            ),
-            SizedBox(
-              height: 20.0,
-            ),
-            PopularRestaurantsWidget(
-              restaurantImage: 'assets/suya.png',
-              restaurantName: 'The Suya Spot',
-              restaurantRating: ' 2.8 ',
-              restaurantSubtitle: '4.5 mi • 8 min • \$2.90 Delivery Fee',
-              discountText: '',
-              discountContainerWidth: 0,
-            ),
-          ],
-        ),
-      ],
-    );
-  }
-}
-
-class PopularRestaurantsWidget extends StatelessWidget {
-  const PopularRestaurantsWidget({
+class AllRestaurantsWidget extends StatelessWidget {
+  const AllRestaurantsWidget({
     super.key,
     required this.restaurantImage,
     required this.restaurantName,
@@ -78,7 +27,7 @@ class PopularRestaurantsWidget extends StatelessWidget {
         Container(
           height: MediaQuery.of(context).size.height * 0.18,
           width: MediaQuery.of(context).size.width,
-          decoration: Constant.restaurantDecoration.copyWith(
+          decoration: Constants.restaurantDecoration.copyWith(
             image: DecorationImage(
               fit: BoxFit.fill,
               image: AssetImage(
@@ -92,14 +41,14 @@ class PopularRestaurantsWidget extends StatelessWidget {
                 bottom: 0.0,
                 left: 0.0,
                 child: Container(
-                  height: 22,
+                  height: 20,
                   width: discountContainerWidth,
-                  padding: const EdgeInsets.symmetric(vertical: 5.0),
-                  decoration: Constant.discountDecoration,
+                  padding: const EdgeInsets.symmetric(vertical: 3.0),
+                  decoration: Constants.discountDecoration,
                   child: Text(
                     discountText,
                     textAlign: TextAlign.center,
-                    style: Constant.discountStyle,
+                    style: Constants.discountStyle,
                   ),
                 ),
               ),
@@ -117,13 +66,13 @@ class PopularRestaurantsWidget extends StatelessWidget {
                 children: [
                   Text(
                     restaurantName,
-                    style: Constant.titleStyle,
+                    style: Constants.titleStyle,
                   ),
                   const Spacer(),
-                  Icon(
+                  const Icon(
                     Icons.favorite_border_outlined,
-                    color: Colors.yellow.shade800,
-                    size: 18,
+                    color: Color(0xFFFE8200),
+                    size: 16,
                   ),
                 ],
               ),
@@ -131,17 +80,17 @@ class PopularRestaurantsWidget extends StatelessWidget {
                 children: [
                   Text(
                     restaurantSubtitle,
-                    style: Constant.subtitleStyle,
+                    style: Constants.subtitleStyle,
                   ),
                   const Spacer(),
-                  Icon(
+                  const Icon(
                     Icons.star,
-                    color: Colors.yellow.shade800,
-                    size: 18,
+                    color: Color(0xFFFFB280),
+                    size: 15,
                   ),
                   Text(
                     restaurantRating,
-                    style: Constant.ratingStyle,
+                    style: Constants.ratingStyle,
                   ),
                 ],
               )

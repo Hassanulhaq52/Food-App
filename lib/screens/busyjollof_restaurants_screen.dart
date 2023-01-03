@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:food_app/constants/constants.dart';
+import 'package:food_app/widgets/busyjollof_restaurants_widget.dart';
 
-class BusyJollofRestaurantScreen extends StatelessWidget {
-  const BusyJollofRestaurantScreen({Key? key}) : super(key: key);
+class BusyJollofRestaurantsScreen extends StatelessWidget {
+  const BusyJollofRestaurantsScreen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -13,22 +14,23 @@ class BusyJollofRestaurantScreen extends StatelessWidget {
           children: const [
             Text(
               'New on BusyJollof',
-              style: Constant.headingStyle,
+              style: Constants.headingStyle,
             ),
             Text(
               'View all',
-              style: Constant.categoryStyle,
+              style: Constants.categoryStyle,
             ),
           ],
         ),
         const SizedBox(
-          height: 6,
+          height: 5,
         ),
         SingleChildScrollView(
           scrollDirection: Axis.horizontal,
+          clipBehavior: Clip.none,
           child: Row(
             children: const [
-              PopularRestaurantsWidget(
+              BusyJollofRestaurantsWidget(
                 restaurantImage: 'assets/safari.png',
                 restaurantName: 'Safari House',
                 restaurantSubtitle: '8.6 mi • \$5.80 Delivery Fee',
@@ -36,7 +38,7 @@ class BusyJollofRestaurantScreen extends StatelessWidget {
               SizedBox(
                 width: 10.0,
               ),
-              PopularRestaurantsWidget(
+              BusyJollofRestaurantsWidget(
                 restaurantImage: 'assets/nkechi.jpg',
                 restaurantName: 'Nkechi\'s kitchen',
                 restaurantSubtitle: '1.7 mi • \$1.20 Delivery Fee',
@@ -44,71 +46,13 @@ class BusyJollofRestaurantScreen extends StatelessWidget {
               SizedBox(
                 width: 10.0,
               ),
-              PopularRestaurantsWidget(
+              BusyJollofRestaurantsWidget(
                 restaurantImage: 'assets/lettuce.jpg',
                 restaurantName: 'Lettuce Restaurant',
                 restaurantSubtitle: '2.3 mi • \$1.80 Delivery Fee',
               )
             ],
           ),
-        ),
-      ],
-    );
-  }
-}
-
-class PopularRestaurantsWidget extends StatelessWidget {
-  const PopularRestaurantsWidget({
-    super.key,
-    required this.restaurantImage,
-    required this.restaurantName,
-    required this.restaurantSubtitle,
-  });
-
-  final String restaurantImage;
-  final String restaurantName;
-  final String restaurantSubtitle;
-
-  @override
-  Widget build(BuildContext context) {
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        Container(
-          height: MediaQuery.of(context).size.height * 0.15,
-          width: MediaQuery.of(context).size.width * 0.53,
-          decoration: Constant.restaurantDecoration.copyWith(
-            image: DecorationImage(
-              fit: BoxFit.fill,
-              image: AssetImage(
-                restaurantImage,
-              ),
-            ),
-          ),
-        ),
-        const SizedBox(
-          height: 4.0,
-        ),
-        SizedBox(
-          width: MediaQuery.of(context).size.width * 0.53,
-          child: Row(
-            children: [
-              Text(
-                restaurantName,
-                style: Constant.titleStyle,
-              ),
-              const Spacer(),
-              Icon(
-                Icons.favorite_border_outlined,
-                color: Colors.yellow.shade800,
-                size: 18,
-              ),
-            ],
-          ),
-        ),
-        Text(
-          restaurantSubtitle,
-          style: Constant.subtitleStyle,
         ),
       ],
     );
